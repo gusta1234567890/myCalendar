@@ -1,0 +1,136 @@
+#calendar-page {
+  width: 100%;
+  height: 100%;
+
+  .header-page {
+    height: 60px;
+    width: 100%;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2em;
+    color: #143296;
+    font-weight: 550;
+  }
+
+  .icon {
+    color: #143296;
+    fontSize: 40;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
+  }
+}
+
+#month-card {
+  margin: 1%;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+
+  .header {
+    text-align: center;
+    font-weight: bold;
+    color: #143296;
+    font-size: 2em;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  .week-days {
+    border-bottom: 1px solid #ccc;
+    color: #143296;
+    display: grid;
+    grid-template-columns: repeat(7, 12.05%);
+
+    .week-day {
+      width: 16%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 140%;
+      margin-left: 100%;
+    }
+  }
+
+  .week {
+    margin: 2px;
+    display: grid;
+    font-size: 100%;
+    margin-bottom: 3%;
+    margin-left: 11.7%;
+    grid-template-columns: repeat(7, 13.65%);
+  }
+}
+
+.content .modal{
+  text-align: center;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .modal-conteiner {
+    background-color: #fff;
+    color: #000;
+    height: 90%;
+    width: 90%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .close {
+      background-color: transparent;
+      outline: none;
+      width: 32px;
+      height: 32px;
+      border: none;
+      right: calc(-100% + 50px);
+      top: 15px;
+      align-items: center;
+      display: flex;
+      position: relative;
+
+      cursor: pointer;
+      &::before,
+      &::after {
+        content: ' ';
+        position: absolute;
+        width: 2.5px;
+        height: 14px;
+        background-color: #000;
+      }
+      &::before{
+        transform: rotate(45deg);
+      }
+      &::after{
+        transform: rotate(-45deg);
+      }
+    }
+
+    .modal-content form{
+      
+      .form-inicio{
+        display: inline;
+        label{
+          margin-right: 2%;
+        }
+      }
+    }
+  }
+}
